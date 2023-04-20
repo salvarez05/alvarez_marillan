@@ -40,8 +40,8 @@ Posteriormente, hay 3 Try/Catch para prevenir el ingreso de datos con caracteres
 
 Se contabiliza la cantidad de personas registradas, registrando nombres, estado civil, edad y limitando cupos cuando estos exceden los 50. 
 Se utilizan las variables "c" y "d",
-Siendo "d" el numero de casados y  
-siendo "c" el numero de solteros.
+Siendo "d" el numero de solteros y  
+siendo "c" el numero de casados.
 
 "menores de edad" es el contador de menores de edad
 "Mayores de edad" indicara la cantidad de mayores de edad.
