@@ -46,6 +46,9 @@ error tipo logico
 Variables a, b, c son poco descriptivas (a = opcion, c= contador de solteros y d= contador de casados/as).
 Hay demasiado codigo en main el cual podria ser transformado en metodos
 
-Variable quesera es redundante,
+Variables quesera, indiceDisponibles son redundantes,
 Metodo opa es poco descriptivo (indica cantidad de cupos disponibles)
 Los metodos requieren por lo general variable double mientras que registro es String
+Hay bucles durante el menu
+
+variables de casados y solteros estaban intercambiadas
