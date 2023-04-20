@@ -135,7 +135,6 @@ public class Registro {
             registro[cuposOcupados(registro)][2] = edad;
             System.out.println("Persona Ingresada");
             }
-
         }
 
 
