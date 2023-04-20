@@ -18,8 +18,9 @@ public class Registro {
                 5) Mostrar la cantidad de personas según estado civil (Soltero/a - Casado/a).
                 6)Salir.
                 """);
-        System.out.println("Seleccione acción a realizar");
+
         while(opcion !=6){
+            System.out.println("Seleccione acción a realizar");
             opcion= teclado.nextInt();
             switch (opcion) {
                 case 1:
@@ -50,10 +51,10 @@ public class Registro {
     private static void mostrarEstadoCivil(String[][] registro) {
         int casados = 0;
         int solteros = 0;
-        for(String[] persona : registro) {
-            if(persona[1].equals("casado/a")) {
+        for (int i = 0; i < registro.length; i++) {
+           if(registro[i][1].equals("casado/a")) {
                 casados++;
-            } else if(persona[1].equals("soltero/a")) {
+            } else if(registro[i][1].equals("soltero/a")) {
                 solteros++;
             }
         }
@@ -67,10 +68,10 @@ public class Registro {
 
     private static void mostrarTerceraEdad(String[][] registro) {
         int contadorTerceraEdad = 0;
-        for (String [] persona : registro) {
-            if (Integer.parseInt(String.valueOf(persona[2])) >= 60 && persona[1].equals("casado/a")) {
+        for (int i = 0; i < registro.length; i++) {
+            if (Integer.parseInt(String.valueOf(registro[i][2])) >= 60 && registro[i][1].equals("casado/a")) {
                 contadorTerceraEdad++;
-            } else if(Integer.parseInt(String.valueOf(persona[2])) >= 65 && persona[1].equals("soltero/a")) {
+            } else if(Integer.parseInt(String.valueOf(registro[i][2])) >= 65 && registro[i][1].equals("soltero/a")) {
                 contadorTerceraEdad++;
             }
         }
@@ -91,12 +92,8 @@ public class Registro {
 
     private static void mostrarMayores(String[][] registro) {
         int mayoresDeEdad = 0;
-
-
-
-
-        for (String [] persona : registro) {
-            if (Integer.parseInt(String.valueOf(persona[2])) >= 18) mayoresDeEdad++;
+        for (int i = 0; i < cuposOcupados(registro); i++) {
+            if (Integer.parseInt(String.valueOf(registro[i][2])) >= 18) mayoresDeEdad++;
         }
 
 
